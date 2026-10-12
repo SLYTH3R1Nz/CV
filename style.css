@@ -1,0 +1,308 @@
+
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #e9edf2;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 15px;
+}
+
+/* CONTAINER CV */
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: #172b4d;
+    color: #ffffff;
+    padding: 35px 28px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-img {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    margin-bottom: 18px;
+}
+
+.profile h1 {
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    color: #c5d5ed;
+    font-size: 14px;
+}
+
+/* BAGIAN SIDEBAR */
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #5e9ce6;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.contact-item span {
+    color: #80b9ff;
+    font-size: 18px;
+    min-width: 20px;
+}
+
+.contact-item p {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* KETERAMPILAN */
+.skill {
+    margin-bottom: 18px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.progress {
+    width: 100%;
+    height: 7px;
+    background-color: #3c4e6c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #70b5ff;
+    border-radius: 10px;
+}
+
+.html {
+    width: 80%;
+}
+
+.css {
+    width: 70%;
+}
+
+.javascript {
+    width: 50%;
+}
+
+.office {
+    width: 75%;
+}
+
+.language-list {
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+.language-list li {
+    margin-bottom: 8px;
+}
+
+/* KONTEN UTAMA */
+.main-content {
+    padding: 45px 40px;
+}
+
+.content-section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    color: #172b4d;
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e7ef;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 65px;
+    height: 3px;
+    background-color: #3978c5;
+}
+
+.main-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* PENDIDIKAN DAN PENGALAMAN */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.timeline-date {
+    color: #3978c5;
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 3px;
+}
+
+.timeline-content {
+    padding-left: 18px;
+    border-left: 2px solid #dce6f2;
+}
+
+.timeline-content h3 {
+    color: #263b59;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.timeline-content .subtitle {
+    color: #3978c5;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.timeline-content p,
+.timeline-content li {
+    font-size: 13px;
+    color: #555;
+}
+
+.timeline-content ul {
+    padding-left: 18px;
+    margin-top: 8px;
+}
+
+/* INFORMASI TAMBAHAN */
+.additional-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.additional-info h3 {
+    font-size: 15px;
+    color: #263b59;
+    margin-bottom: 6px;
+}
+
+.additional-info p {
+    font-size: 13px;
+}
+
+/* RESPONSIVE UNTUK HP DAN TABLET */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px 8px;
+    }
+
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 30px 25px;
+    }
+
+    .main-content {
+        padding: 30px 25px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .timeline-content {
+        padding-left: 15px;
+    }
+
+    .additional-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PENGATURAN CETAK / PDF */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        background-color: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .cv-container {
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        border-radius: 0;
+        grid-template-columns: 32% 68%;
+    }
+
+    .sidebar {
+        padding: 25px 20px;
+    }
+
+    .main-content {
+        padding: 30px 25px;
+    }
+
+    .content-section,
+    .timeline-item,
+    .sidebar-section {
+        break-inside: avoid;
+    }
+}
